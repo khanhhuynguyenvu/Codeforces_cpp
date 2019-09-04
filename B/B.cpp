@@ -47,6 +47,9 @@ const   int            md  = 0;
 
 // PlayGround
 int main() {
+	//Fast in-out
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL); 
 	Inp;
 return 0;
 }

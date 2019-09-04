@@ -54,18 +54,10 @@ int *array_return(int arr[]){
 }
 
 int main(){
+	//Fast in-out
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL); 
 	Inp;
 	//Out;
-	sci(n);
-	int arr[n];
-	rep(i,0,n){
-		sci(x);
-		arr[i] = x;	
-	}
-	int *p;
-	p = array_return(arr);
-	for(int j;j<n;j++){
-		cout<<p[j]<<" ";
-	}
 return 0;
 }

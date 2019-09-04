@@ -47,49 +47,10 @@ const   int            ms  = 0;
 const   int            md  = 0;
 
 // PlayGround
-int len,ds[10],arr[10],ans = 10;
-void bt(int id){
-	if(id == len){
-		int sum = 0,dem = 0;
-		string temp="";
-		rep(i,0,len){
-			if(ds[i]){
-				sum*=10;
-				//cout<<arr[i];
-				sum+=arr[i];
-				temp+=(arr[i]+'0');
-				dem++;
-			}
-		}
-		int l = 0;
-		while(temp[l] == '0') l++;
-		dem-=l;
-		int p = sqrt(sum);
-		if(p*p == sum && len-dem < ans && p!=0){
-			ans = len-dem;
-			  
-		}
-		//cout<<endl<<"SUM ="<<sum<<" and "<<len-dem<<" "<<temp<<endl;
-	
-	}else{
-		rep(i,0,2){
-			ds[id] = i;
-			bt(id+1);
-		}
-	}
-}
 int main(){
+	//Fast in-out
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL); 
 	//Inp;
-	sci(n);
-	int i=0;
-	while(n){
-		arr[i++] = n%10;
-		n/=10;
-	}
-	len = i;
-	reverse(arr,arr+i);
-	bt(0);
-	if(ans!=10) cout<<ans<<endl;
-	else cout<<"-1"<<endl;
 return 0;
 }
